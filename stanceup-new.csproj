@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1BFE558C-E2DE-40F4-9D5E-686BCDC62B05}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>stanceup_new</RootNamespace>
+    <AssemblyName>stanceup-new</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\cabrera2020\OneDrive - Technological University of the Philippines\Desktop\School\4th Year %28Second Sem%29\Capstone 2\Software\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>67A176F400841BE32DD8C19FF501A2B87000674F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>stanceup-new_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kinect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Kinect.Tools, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64" />
+    <Reference Include="Microsoft.Kinect.Wpf.Controls, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.31\lib\net48\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.31\lib\net48\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KinectViewers\KinectBodyIndexView.cs" />
+    <Compile Include="KinectViewers\KinectBodyView.cs" />
+    <Compile Include="KinectViewers\KinectDepthView.cs" />
+    <Compile Include="KinectViewers\KinectIRView.cs" />
+    <Compile Include="login.xaml.cs">
+      <DependentUpon>login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Account.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Connection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GreenT3-AllMovements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GreenT3-PerMovement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GreenT3-Record.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GreenT4-AllMovements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GreenT4-PerMovement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GreenT4-Record.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LoadingScreenWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Tracking.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Training-GreenT3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Training-White.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Training-Yellow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Training.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Training_Green.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Training_GreenT4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\VerifyIMUs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\VerifyKinect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\White-AllMovements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\White-PerMovement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\White-Record.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Yellow-AllMovements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Yellow-PerMovement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Yellow-Record.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NavButton.cs" />
+    <Compile Include="Pages\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Account.xaml.cs">
+      <DependentUpon>Account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Connection.xaml.cs">
+      <DependentUpon>Connection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GreenT3-AllMovements.xaml.cs">
+      <DependentUpon>GreenT3-AllMovements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GreenT3-PerMovement.xaml.cs">
+      <DependentUpon>GreenT3-PerMovement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GreenT3-Record.xaml.cs">
+      <DependentUpon>GreenT3-Record.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GreenT4-AllMovements.xaml.cs">
+      <DependentUpon>GreenT4-AllMovements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GreenT4-PerMovement.xaml.cs">
+      <DependentUpon>GreenT4-PerMovement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GreenT4-Record.xaml.cs">
+      <DependentUpon>GreenT4-Record.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LoadingScreenWindow.xaml.cs">
+      <DependentUpon>LoadingScreenWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tracking.xaml.cs">
+      <DependentUpon>Tracking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Training-GreenT3.xaml.cs">
+      <DependentUpon>Training-GreenT3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Training-White.xaml.cs">
+      <DependentUpon>Training-White.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Training-Yellow.xaml.cs">
+      <DependentUpon>Training-Yellow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Training.xaml.cs">
+      <DependentUpon>Training.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Training_Green.xaml.cs">
+      <DependentUpon>Training_Green.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Training_GreenT4.xaml.cs">
+      <DependentUpon>Training_GreenT4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VerifyIMUs.xaml.cs">
+      <DependentUpon>VerifyIMUs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VerifyKinect.xaml.cs">
+      <DependentUpon>VerifyKinect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\White-AllMovements.xaml.cs">
+      <DependentUpon>White-AllMovements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\White-PerMovement.xaml.cs">
+      <DependentUpon>White-PerMovement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\White-Record.xaml.cs">
+      <DependentUpon>White-Record.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Yellow-AllMovements.xaml.cs">
+      <DependentUpon>Yellow-AllMovements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Yellow-PerMovement.xaml.cs">
+      <DependentUpon>Yellow-PerMovement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Yellow-Record.xaml.cs">
+      <DependentUpon>Yellow-Record.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="stanceup-new_TemporaryKey.pfx" />
+    <Resource Include="Fonts\Montserrat-VariableFont_wght.ttf" />
+    <Resource Include="Fonts\Now-Bold.otf" />
+    <Resource Include="Fonts\Password.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\About.png" />
+    <Resource Include="Assets\Account.png" />
+    <Resource Include="Assets\All Movements.png" />
+    <Resource Include="Assets\Back Arrow.png" />
+    <Resource Include="Assets\Belt.png" />
+    <Resource Include="Assets\Blue.png" />
+    <Resource Include="Assets\Competition.png" />
+    <Resource Include="Assets\Connectivity.png" />
+    <Resource Include="Assets\Dark Blue.png" />
+    <Resource Include="Assets\Goal per Week.png" />
+    <Resource Include="Assets\Green.png" />
+    <Resource Include="Assets\Home.png" />
+    <Resource Include="Assets\IMG_20220927_182047.png" />
+    <Resource Include="Assets\IMU.png" />
+    <Resource Include="Assets\Info.png" />
+    <Resource Include="Assets\Kinect.png" />
+    <Resource Include="Assets\Per Movement.png" />
+    <Resource Include="Assets\placeholder.png" />
+    <Resource Include="Assets\Profile.png" />
+    <Resource Include="Assets\ProfilePic.png" />
+    <Resource Include="Assets\Scoring per Level.png" />
+    <Resource Include="Assets\Settings.png" />
+    <Resource Include="Assets\Shutdown.png" />
+    <Resource Include="Assets\stanceUP.png" />
+    <Resource Include="Assets\Taegeuk 1.gif" />
+    <Resource Include="Assets\Taekwondo Court BG.jpg" />
+    <Resource Include="Assets\Time Spent.png" />
+    <Resource Include="Assets\Tracking.png" />
+    <Resource Include="Assets\Training.png" />
+    <Resource Include="Assets\White.png" />
+    <Resource Include="Assets\Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Training_T1\1.jpg" />
+    <Resource Include="Training_T1\10.jpg" />
+    <Resource Include="Training_T1\11.jpg" />
+    <Resource Include="Training_T1\12.jpg" />
+    <Resource Include="Training_T1\13.jpg" />
+    <Resource Include="Training_T1\14.jpg" />
+    <Resource Include="Training_T1\15.jpg" />
+    <Resource Include="Training_T1\16.jpg" />
+    <Resource Include="Training_T1\17.jpg" />
+    <Resource Include="Training_T1\18.jpg" />
+    <Resource Include="Training_T1\19.jpg" />
+    <Resource Include="Training_T1\2.jpg" />
+    <Resource Include="Training_T1\20.jpg" />
+    <Resource Include="Training_T1\21.jpg" />
+    <Resource Include="Training_T1\22.jpg" />
+    <Resource Include="Training_T1\3.jpg" />
+    <Resource Include="Training_T1\4.jpg" />
+    <Resource Include="Training_T1\5.jpg" />
+    <Resource Include="Training_T1\6.jpg" />
+    <Resource Include="Training_T1\7.jpg" />
+    <Resource Include="Training_T1\8.jpg" />
+    <Resource Include="Training_T1\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Diagram_T1\1.jpg" />
+    <Resource Include="Diagram_T1\10.jpg" />
+    <Resource Include="Diagram_T1\11.jpg" />
+    <Resource Include="Diagram_T1\12.jpg" />
+    <Resource Include="Diagram_T1\13.jpg" />
+    <Resource Include="Diagram_T1\14.jpg" />
+    <Resource Include="Diagram_T1\15.jpg" />
+    <Resource Include="Diagram_T1\16.jpg" />
+    <Resource Include="Diagram_T1\17.jpg" />
+    <Resource Include="Diagram_T1\18.jpg" />
+    <Resource Include="Diagram_T1\19.jpg" />
+    <Resource Include="Diagram_T1\2.jpg" />
+    <Resource Include="Diagram_T1\20.jpg" />
+    <Resource Include="Diagram_T1\21.jpg" />
+    <Resource Include="Diagram_T1\22.jpg" />
+    <Resource Include="Diagram_T1\3.jpg" />
+    <Resource Include="Diagram_T1\4.jpg" />
+    <Resource Include="Diagram_T1\5.jpg" />
+    <Resource Include="Diagram_T1\6.jpg" />
+    <Resource Include="Diagram_T1\7.jpg" />
+    <Resource Include="Diagram_T1\8.jpg" />
+    <Resource Include="Diagram_T1\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Training_T4\1.jpg" />
+    <Resource Include="Training_T4\10.jpg" />
+    <Resource Include="Training_T4\11.jpg" />
+    <Resource Include="Training_T4\12.jpg" />
+    <Resource Include="Training_T4\13.jpg" />
+    <Resource Include="Training_T4\14.jpg" />
+    <Resource Include="Training_T4\15.jpg" />
+    <Resource Include="Training_T4\16.jpg" />
+    <Resource Include="Training_T4\17.jpg" />
+    <Resource Include="Training_T4\18.jpg" />
+    <Resource Include="Training_T4\19.jpg" />
+    <Resource Include="Training_T4\2.jpg" />
+    <Resource Include="Training_T4\20.jpg" />
+    <Resource Include="Training_T4\21.jpg" />
+    <Resource Include="Training_T4\22.jpg" />
+    <Resource Include="Training_T4\23.jpg" />
+    <Resource Include="Training_T4\24.jpg" />
+    <Resource Include="Training_T4\25.jpg" />
+    <Resource Include="Training_T4\26.jpg" />
+    <Resource Include="Training_T4\27.jpg" />
+    <Resource Include="Training_T4\28.jpg" />
+    <Resource Include="Training_T4\29.jpg" />
+    <Resource Include="Training_T4\3.jpg" />
+    <Resource Include="Training_T4\30.jpg" />
+    <Resource Include="Training_T4\31.jpg" />
+    <Resource Include="Training_T4\4.jpg" />
+    <Resource Include="Training_T4\5.jpg" />
+    <Resource Include="Training_T4\6.jpg" />
+    <Resource Include="Training_T4\7.jpg" />
+    <Resource Include="Training_T4\8.jpg" />
+    <Resource Include="Training_T4\9.jpg" />
+    <Resource Include="Diagram_T4\1.jpg" />
+    <Resource Include="Diagram_T4\10.jpg" />
+    <Resource Include="Diagram_T4\11.jpg" />
+    <Resource Include="Diagram_T4\12.jpg" />
+    <Resource Include="Diagram_T4\13.jpg" />
+    <Resource Include="Diagram_T4\14.jpg" />
+    <Resource Include="Diagram_T4\15.jpg" />
+    <Resource Include="Diagram_T4\16.jpg" />
+    <Resource Include="Diagram_T4\17.jpg" />
+    <Resource Include="Diagram_T4\18.jpg" />
+    <Resource Include="Diagram_T4\19.jpg" />
+    <Resource Include="Diagram_T4\2.jpg" />
+    <Resource Include="Diagram_T4\20.jpg" />
+    <Resource Include="Diagram_T4\21.jpg" />
+    <Resource Include="Diagram_T4\22.jpg" />
+    <Resource Include="Diagram_T4\23.jpg" />
+    <Resource Include="Diagram_T4\24.jpg" />
+    <Resource Include="Diagram_T4\25.jpg" />
+    <Resource Include="Diagram_T4\26.jpg" />
+    <Resource Include="Diagram_T4\27.jpg" />
+    <Resource Include="Diagram_T4\28.jpg" />
+    <Resource Include="Diagram_T4\29.jpg" />
+    <Resource Include="Diagram_T4\3.jpg" />
+    <Resource Include="Diagram_T4\30.jpg" />
+    <Resource Include="Diagram_T4\31.jpg" />
+    <Resource Include="Diagram_T4\4.jpg" />
+    <Resource Include="Diagram_T4\5.jpg" />
+    <Resource Include="Diagram_T4\6.jpg" />
+    <Resource Include="Diagram_T4\7.jpg" />
+    <Resource Include="Diagram_T4\8.jpg" />
+    <Resource Include="Diagram_T4\9.jpg" />
+    <Resource Include="Training_T3\1.jpg" />
+    <Resource Include="Training_T3\10.jpg" />
+    <Resource Include="Training_T3\11.jpg" />
+    <Resource Include="Training_T3\12.jpg" />
+    <Resource Include="Training_T3\13.jpg" />
+    <Resource Include="Training_T3\14.jpg" />
+    <Resource Include="Training_T3\15.jpg" />
+    <Resource Include="Training_T3\16.jpg" />
+    <Resource Include="Training_T3\17.jpg" />
+    <Resource Include="Training_T3\18.jpg" />
+    <Resource Include="Training_T3\19.jpg" />
+    <Resource Include="Training_T3\2.jpg" />
+    <Resource Include="Training_T3\20.jpg" />
+    <Resource Include="Training_T3\21.jpg" />
+    <Resource Include="Training_T3\22.jpg" />
+    <Resource Include="Training_T3\23.jpg" />
+    <Resource Include="Training_T3\24.jpg" />
+    <Resource Include="Training_T3\25.jpg" />
+    <Resource Include="Training_T3\26.jpg" />
+    <Resource Include="Training_T3\27.jpg" />
+    <Resource Include="Training_T3\28.jpg" />
+    <Resource Include="Training_T3\29.jpg" />
+    <Resource Include="Training_T3\3.jpg" />
+    <Resource Include="Training_T3\30.jpg" />
+    <Resource Include="Training_T3\31.jpg" />
+    <Resource Include="Training_T3\32.jpg" />
+    <Resource Include="Training_T3\33.jpg" />
+    <Resource Include="Training_T3\34.jpg" />
+    <Resource Include="Training_T3\35.jpg" />
+    <Resource Include="Training_T3\36.jpg" />
+    <Resource Include="Training_T3\4.jpg" />
+    <Resource Include="Training_T3\5.jpg" />
+    <Resource Include="Training_T3\6.jpg" />
+    <Resource Include="Training_T3\7.jpg" />
+    <Resource Include="Training_T3\8.jpg" />
+    <Resource Include="Training_T3\9.jpg" />
+    <Resource Include="Diagram_T3\1.jpg" />
+    <Resource Include="Diagram_T3\10.jpg" />
+    <Resource Include="Diagram_T3\11.jpg" />
+    <Resource Include="Diagram_T3\12.jpg" />
+    <Resource Include="Diagram_T3\13.jpg" />
+    <Resource Include="Diagram_T3\14.jpg" />
+    <Resource Include="Diagram_T3\15.jpg" />
+    <Resource Include="Diagram_T3\16.jpg" />
+    <Resource Include="Diagram_T3\17.jpg" />
+    <Resource Include="Diagram_T3\18.jpg" />
+    <Resource Include="Diagram_T3\19.jpg" />
+    <Resource Include="Diagram_T3\2.jpg" />
+    <Resource Include="Diagram_T3\20.jpg" />
+    <Resource Include="Diagram_T3\21.jpg" />
+    <Resource Include="Diagram_T3\22.jpg" />
+    <Resource Include="Diagram_T3\23.jpg" />
+    <Resource Include="Diagram_T3\24.jpg" />
+    <Resource Include="Diagram_T3\25.jpg" />
+    <Resource Include="Diagram_T3\26.jpg" />
+    <Resource Include="Diagram_T3\27.jpg" />
+    <Resource Include="Diagram_T3\28.jpg" />
+    <Resource Include="Diagram_T3\29.jpg" />
+    <Resource Include="Diagram_T3\3.jpg" />
+    <Resource Include="Diagram_T3\30.jpg" />
+    <Resource Include="Diagram_T3\31.jpg" />
+    <Resource Include="Diagram_T3\32.jpg" />
+    <Resource Include="Diagram_T3\33.jpg" />
+    <Resource Include="Diagram_T3\34.jpg" />
+    <Resource Include="Diagram_T3\35.jpg" />
+    <Resource Include="Diagram_T3\36.jpg" />
+    <Resource Include="Diagram_T3\4.jpg" />
+    <Resource Include="Diagram_T3\5.jpg" />
+    <Resource Include="Diagram_T3\6.jpg" />
+    <Resource Include="Diagram_T3\7.jpg" />
+    <Resource Include="Diagram_T3\8.jpg" />
+    <Resource Include="Diagram_T3\9.jpg" />
+    <Resource Include="Training_T2\1.png" />
+    <Resource Include="Training_T2\10.png" />
+    <Resource Include="Training_T2\11.png" />
+    <Resource Include="Training_T2\12.png" />
+    <Resource Include="Training_T2\13.png" />
+    <Resource Include="Training_T2\14.png" />
+    <Resource Include="Training_T2\15.png" />
+    <Resource Include="Training_T2\16.png" />
+    <Resource Include="Training_T2\17.png" />
+    <Resource Include="Training_T2\18.png" />
+    <Resource Include="Training_T2\19.png" />
+    <Resource Include="Training_T2\2.png" />
+    <Resource Include="Training_T2\20.png" />
+    <Resource Include="Training_T2\21.png" />
+    <Resource Include="Training_T2\22.png" />
+    <Resource Include="Training_T2\23.png" />
+    <Resource Include="Training_T2\24.png" />
+    <Resource Include="Training_T2\25.png" />
+    <Resource Include="Training_T2\3.png" />
+    <Resource Include="Training_T2\4.png" />
+    <Resource Include="Training_T2\5.png" />
+    <Resource Include="Training_T2\6.png" />
+    <Resource Include="Training_T2\7.png" />
+    <Resource Include="Training_T2\8.png" />
+    <Resource Include="Training_T2\9.png" />
+    <Resource Include="Diagram_T2\1.jpg" />
+    <Resource Include="Diagram_T2\10.jpg" />
+    <Resource Include="Diagram_T2\11.jpg" />
+    <Resource Include="Diagram_T2\12.jpg" />
+    <Resource Include="Diagram_T2\13.jpg" />
+    <Resource Include="Diagram_T2\14.jpg" />
+    <Resource Include="Diagram_T2\15.jpg" />
+    <Resource Include="Diagram_T2\16.jpg" />
+    <Resource Include="Diagram_T2\17.jpg" />
+    <Resource Include="Diagram_T2\18.jpg" />
+    <Resource Include="Diagram_T2\19.jpg" />
+    <Resource Include="Diagram_T2\2.jpg" />
+    <Resource Include="Diagram_T2\20.jpg" />
+    <Resource Include="Diagram_T2\21.jpg" />
+    <Resource Include="Diagram_T2\22.jpg" />
+    <Resource Include="Diagram_T2\23.jpg" />
+    <Resource Include="Diagram_T2\24.jpg" />
+    <Resource Include="Diagram_T2\25.jpg" />
+    <Resource Include="Diagram_T2\3.jpg" />
+    <Resource Include="Diagram_T2\4.jpg" />
+    <Resource Include="Diagram_T2\5.jpg" />
+    <Resource Include="Diagram_T2\6.jpg" />
+    <Resource Include="Diagram_T2\7.jpg" />
+    <Resource Include="Diagram_T2\8.jpg" />
+    <Resource Include="Diagram_T2\9.jpg" />
+    <Resource Include="Pages\placement.png" />
+    <Resource Include="Pages\wearables_3D.jpg" />
+    <Resource Include="Assets\taekwondo.ico" />
+    <Content Include="Resources\Taegeuk 1.wmv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Taegeuk 2.WMV">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Taegeuk 3.WMV">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Taegeuk 4.WMV">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

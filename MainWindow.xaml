@@ -1,0 +1,67 @@
+﻿<Window x:Class="stanceup_new.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:stanceup_new"
+        xmlns:NavButton="clr-namespace:stanceup_new"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Icon="Assets/taekwondo.ico"
+        x:Name="stanceUP"
+        Height="700" 
+        Width="1350"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent">
+    <Grid>
+        <Grid Background="white">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="407*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/Assets/stanceUP.png"
+                   Grid.Column="1"
+                   Height="300"
+                   VerticalAlignment="Top"
+                   Margin="0,105,0,0"></Image>
+            <TextBlock Text="stanceUP"
+                       Foreground="#011638"
+                       Grid.Column="1"
+                       FontFamily="{StaticResource Now}"
+                       FontSize="90"
+                       HorizontalAlignment="Center"
+                       Margin="0,395,0,0">
+            </TextBlock>
+            <TextBlock Text="you can do great and be great."
+                       Foreground="Black"
+                       Grid.Column="1"
+                       FontFamily="{StaticResource Montserrat}"
+                       FontSize="40"
+                       HorizontalAlignment="Center"
+                       Margin="0,500,0,0">
+            </TextBlock>
+
+
+
+
+
+        </Grid>
+        <ListBox SelectionMode="Single" SelectionChanged="sidebar_SelectionChanged"   Background="#D9D9D9" Grid.Column="0" x:Name="sidebar" Margin="0,0,1220,0" BorderThickness="0">
+            
+            <local:NavButton NavLink="/Pages/Home.xaml" Margin="3,70,0,0" Padding="3" Icon="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" Height="63" Width="66"></local:NavButton>
+            <local:NavButton NavLink="/Pages/Training.xaml" Margin="3,50,0,0" Padding="3" Icon="M13.5,5.5C14.59,5.5 15.5,4.58 15.5,3.5C15.5,2.38 14.59,1.5 13.5,1.5C12.39,1.5 11.5,2.38 11.5,3.5C11.5,4.58 12.39,5.5 13.5,5.5M9.89,19.38L10.89,15L13,17V23H15V15.5L12.89,13.5L13.5,10.5C14.79,12 16.79,13 19,13V11C17.09,11 15.5,10 14.69,8.58L13.69,7C13.29,6.38 12.69,6 12,6C11.69,6 11.5,6.08 11.19,6.08L6,8.28V13H8V9.58L9.79,8.88L8.19,17L3.29,16L2.89,18L9.89,19.38Z" Height="63" Width="66"></local:NavButton>
+            <local:NavButton NavLink="/Pages/Tracking.xaml" Margin="3,50,0,0" Padding="3" Icon="M17.45,15.18L22,7.31V19L22,21H2V3H4V15.54L9.5,6L16,9.78L20.24,2.45L21.97,3.45L16.74,12.5L10.23,8.75L4.31,19H6.57L10.96,11.44L17.45,15.18Z" Height="63" Width="66"></local:NavButton>
+            <local:NavButton NavLink="/Pages/Account.xaml" Margin="3,50,0,100" Padding="3" Icon="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" Height="63" Width="66"></local:NavButton>
+            <Button BorderThickness="0" Click="btnclick_close" Width="50" Margin="35,0,0,0">
+                <Image Source="/Assets/Shutdown.png"
+                       Height="50" Width="50" Margin="0,0,0,0"></Image>
+            </Button>
+        </ListBox>
+        <Frame Grid.Column="1"
+               x:Name="navframe"
+               NavigationUIVisibility="Hidden" Margin="130,0,0,0"/>
+    </Grid>
+</Window>

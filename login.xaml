@@ -1,0 +1,88 @@
+﻿<Window x:Class="stanceup_new.login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:stanceup_new"
+        mc:Ignorable="d"
+        Title="login" Height="700" MinWidth="1350"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+        </Grid>
+
+        <Grid>
+
+            <Image Source="/Assets/stanceUP.png"
+                   HorizontalAlignment="Left"
+                   Width="874" Margin="-69,-60,0,-60"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1000"/>
+                <ColumnDefinition Width="500"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Content="x"
+                    BorderThickness="0"
+                    Background="white"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    FontFamily="{StaticResource Montserrat}" 
+                    Margin="290,0,165,650" 
+                    Grid.Column="1" 
+                    Click="btnclick_LIClose">
+            </Button>
+            <TextBlock Text="stanceUP"
+                       Foreground="#07234F"
+                       FontSize="65"
+                       FontFamily="{StaticResource Now}"
+                       HorizontalAlignment="Right" Margin="0,110,337,509"
+                       Grid.ColumnSpan="2"></TextBlock>
+            <TextBlock Text="Enter your details."
+                       Foreground="Black"
+                       FontSize="20"
+                       FontFamily="{StaticResource Montserrat}"
+                       HorizontalAlignment="Right" Margin="0,196,98,440"/>
+            <TextBlock Text="Name"
+                       Foreground="Black"
+                       FontSize="20"
+                       FontFamily="{StaticResource Montserrat}"
+                       HorizontalAlignment="Left" Margin="733,243,0,422" RenderTransformOrigin="0.668,-2.744"/>
+            <TextBox Name="txtName" FontSize="23" FontFamily="{StaticResource Montserrat}"  Background="#F6F6F6" Foreground="Black" Margin="722,283,250,376" Grid.ColumnSpan="2"/>
+            <TextBlock Text="Password"
+                       Foreground="Black"
+                       FontSize="20"
+                       FontFamily="{StaticResource Montserrat}"
+                       HorizontalAlignment="Left" Margin="733,361,0,300"/>
+            <TextBox Name="txtPassword" FontSize="25" FontFamily="{StaticResource Password}"  Background="#F6F6F6" Foreground="Black" Margin="722,400,250,257" Grid.ColumnSpan="2"/>
+            <Button Content="Sign Up"
+                    HorizontalAlignment="Left"
+                    Margin="722,527,0,91"
+                    Width="264"
+                    Background="#0C2C5F"
+                    Foreground="white"
+                    FontSize="20"
+                    FontFamily="{StaticResource Montserrat}" Click="btnclick_SignUp"
+                    />
+            <Button Content="Log In"
+                HorizontalAlignment="Left"
+                Margin="991,527,0,91"
+                Width="259"
+                Background="#0C2C5F"
+                Foreground="white"
+                FontSize="20"
+                FontFamily="{StaticResource Montserrat}" Click="btnclick_LogIn" Grid.ColumnSpan="2"
+                    />
+            <DatePicker Name="DatePicker1" 
+                        HorizontalAlignment="Left" Margin="935,466,0,187" Grid.ColumnSpan="2"/>
+
+        </Grid>
+    </Grid>
+</Window>
